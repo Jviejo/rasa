@@ -1,0 +1,127 @@
+2019-11-20 13:44:06,926 [INFO ]  Starting Rasa server on http://localhost:5005
+2019-11-20 13:44:11,610 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]
+2019-11-20 13:44:21,704 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\request.py", line 169, in load_json
+    self.parsed_json = loads(self.body)
+  File "C:\Users\jviejo\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\jviejo\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\jviejo\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\app.py", line 942, in handle_request
+    response = await response
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\rasa\core\channels\channel.py", line 461, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\rasa\core\channels\channel.py", line 411, in _extract_sender
+    return req.json.get("sender", None)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\request.py", line 163, in json
+    self.load_json()
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\request.py", line 173, in load_json
+    raise InvalidUsage("Failed when parsing body as json")
+sanic.exceptions.InvalidUsage: Failed when parsing body as json
+2019-11-20 13:44:42,186 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\request.py", line 169, in load_json
+    self.parsed_json = loads(self.body)
+  File "C:\Users\jviejo\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\jviejo\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\jviejo\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\app.py", line 942, in handle_request
+    response = await response
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\rasa\core\channels\channel.py", line 461, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\rasa\core\channels\channel.py", line 411, in _extract_sender
+    return req.json.get("sender", None)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\request.py", line 163, in json
+    self.load_json()
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\request.py", line 173, in load_json
+    raise InvalidUsage("Failed when parsing body as json")
+sanic.exceptions.InvalidUsage: Failed when parsing body as json
+2019-11-20 13:46:30,602 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/webhooks/rest/webhook'
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\request.py", line 169, in load_json
+    self.parsed_json = loads(self.body)
+  File "C:\Users\jviejo\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\jviejo\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\jviejo\AppData\Local\Programs\Python\Python37\lib\json\decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\app.py", line 942, in handle_request
+    response = await response
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\rasa\core\channels\channel.py", line 461, in receive
+    sender_id = await self._extract_sender(request)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\rasa\core\channels\channel.py", line 411, in _extract_sender
+    return req.json.get("sender", None)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\request.py", line 163, in json
+    self.load_json()
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\request.py", line 173, in load_json
+    raise InvalidUsage("Failed when parsing body as json")
+sanic.exceptions.InvalidUsage: Failed when parsing body as json
+2019-11-20 13:58:24,240 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/'
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\app.py", line 918, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 447, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method POST not allowed for URL /
+2019-11-20 14:02:36,015 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/version'
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\app.py", line 918, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 447, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method POST not allowed for URL /version
+2019-11-20 14:04:01,591 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/conversations'
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\app.py", line 918, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 470, in _get
+    raise NotFound("Requested URL {} not found".format(url))
+sanic.exceptions.NotFound: Requested URL /conversations not found
+2019-11-20 14:08:23,463 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/model/train'
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\app.py", line 918, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 447, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /model/train
+2019-11-20 14:08:39,622 [ERROR]  Exception occurred while handling uri: 'http://localhost:5005/model/train'
+Traceback (most recent call last):
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\app.py", line 918, in handle_request
+    handler, args, kwargs, uri = self.router.get(request)
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 407, in get
+    return self._get(request.path, request.method, "")
+  File "c:\users\jviejo\pycharmprojects\rasa\lib\site-packages\sanic\router.py", line 447, in _get
+    raise method_not_supported
+sanic.exceptions.MethodNotSupported: Method GET not allowed for URL /model/train
+2020-01-24 08:40:06,047 [INFO ]  Starting Rasa server on http://localhost:5005
+2020-01-24 08:40:10,109 [INFO ]  Entry Point [tensor2tensor.envs.tic_tac_toe_env:TicTacToeEnv] registered with id [T2TEnv-TicTacToeEnv-v0]

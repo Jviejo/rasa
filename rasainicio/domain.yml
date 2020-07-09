@@ -1,0 +1,223 @@
+intents:
+- hola
+- adios
+- ejemplos
+- buscar
+- ayuda
+- rechazo
+- elemento
+- afirmacion
+- organismos
+- liquidar
+- reset
+- limpiar
+- intentfecha
+- intentvoluntaria
+- intentdir
+- fraccionar
+- cambiar
+- cuenta_gestion_recaudatoria
+- derechos_reconocidos
+- voluntaria
+- ejecutiva
+- embargos
+- expediente_gestion
+- notificaciones
+- ibi
+- registro_transmisiones
+- multas
+- fraccionamientos
+- asistencia
+- personas
+- concursales
+- levantamiento_embargos
+- prescripcion
+entities:
+- elemento
+- organismo
+- nif
+- matricula
+- rc
+- nf
+- expediente
+- nombre
+- apellido
+- concepto
+- desde
+- hasta
+- municipio
+- mes
+- fecharelativa
+- dia
+- numerovoluntaria
+- lid
+- siglas
+- calle
+- num1
+- num2
+- letra
+- escalera
+- planta
+- puerta
+- cantidad
+- numeroplazos
+- entidad
+- valor
+- aaaa
+- fecha_hasta
+- fecha_desde
+- oficina
+- tipo_concursal
+- modo_multa
+- periodo
+- notario
+- causa_transmision
+- tipo_embargo
+- tipo_precripcion
+- tipo
+- subtipo
+- estado_cargo
+- tipo_asistencia
+- forma_entrada
+- tipo_valor
+slots:
+  apellido:
+    type: text
+  calle:
+    type: text
+  cantidad:
+    type: text
+  concepto:
+    type: text
+  desde:
+    type: float
+    max_value: 1.0
+    min_value: 0.0
+  dia:
+    type: text
+  elemento:
+    type: text
+  escalera:
+    type: text
+  expediente:
+    type: text
+  fecharelativa:
+    type: text
+  hasta:
+    type: float
+    max_value: 1.0
+    min_value: 0.0
+  letra:
+    type: text
+  matricula:
+    type: text
+  mes:
+    type: text
+  municipio:
+    type: text
+  nf:
+    type: text
+  nif:
+    type: text
+  nombre:
+    type: text
+  num1:
+    type: text
+  num2:
+    type: text
+  numeroplazos:
+    type: text
+  numerovoluntaria:
+    type: text
+  organismo:
+    type: text
+  planta:
+    type: text
+  puerta:
+    type: text
+  rc:
+    type: text
+  siglas:
+    type: text
+templates:
+  utter_intentdir:
+  - text: siglas = {siglas} calle={calle} numero {num1} numero {num2} escalera {escalera}
+      planta {planta} puerta {puerta}
+  utter_liquidar:
+  - text: LID persona= {nombre} periodo {desde}  {hasta} municipio= {municipio} casa=
+      {rc} coche= {matricula}
+  utter_hola:
+  - text: Bienvenido al gttbot. Si tecleas ayuda te dire lo que puedo hacer. Si escribes
+      ejemplos te dire frases que puedes usar
+  utter_adios:
+  - text: No lo comprendo, pregunta de nuevo, por favor
+  utter_fecha:
+  - text: esto es una fecha {fecharelativa} {mes} {dia}
+  utter_voluntaria:
+  - text: voluntaria  {numerovoluntaria} {organismo}
+  utter_buscar:
+  - text: elemento {elemento} organismo {organismo} nif {nif} referencia catastral
+      {rc} expediente  {expediente}  nombre {nombre} apellido {apellido}
+  utter_ayuda:
+  - text: Asistente para la busqueda de información en el sit. Teclea ejemplos para
+      que veas como me puedes pregunar facilmente.
+  utter_organismos:
+  - text: avila, zaragoza
+  utter_cambiar:
+  - text: cambiado {entidad} {valor}
+  utter_fraccionar:
+  - text: numero de plazos {numeroplazos} {cantidad} {concepto}
+  utter_ejemplos:
+  - text: dame datos del 12246622L en avila, dame el recibo 2010 IBI de JOAQUIN EN
+      AREVALO expediente de Zaragoza de iae de MARTIN Resumen  de la primera voluntaria
+      de Avila Cobrado ayer en La coruña
+  utter_cuenta_gestion_recaudatoria:
+  - text: cuenta_gestion_recaudatoria
+  utter_derechos_reconocidos:
+  - text: derechos_reconocidos
+  utter_ejecutiva:
+  - text: ejecutiva
+  utter_embargos:
+  - text: embargos
+  utter_expediente_gestion:
+  - text: expediente_gestion
+  utter_notificaciones:
+  - text: notificaciones
+  utter_ibi:
+  - text: ibi
+  utter_registro_transmisiones:
+  - text: registro_transmisiones
+  utter_multas:
+  - text: multas
+  utter_fraccionamientos:
+  - text: fraccionamientos
+  utter_asistencia:
+  - text: asistencia
+  utter_personas:
+  - text: personas
+actions:
+- utter_liquidar
+- utter_hola
+- utter_adios
+- utter_ejemplos
+- action_buscar
+- utter_ayuda
+- utter_buscar
+- utter_organismos
+- utter_fecha
+- utter_voluntaria
+- utter_intentdir
+- utter_fraccionar
+- utter_cambiar
+- utter_cuenta_gestion_recaudatoria
+- utter_derechos_reconocidos
+- utter_ejecutiva
+- utter_embargos
+- utter_expediente_gestion
+- utter_notificaciones
+- utter_ibi
+- utter_registro_transmisiones
+- utter_multas
+- utter_fraccionamientos
+- utter_asistencia
+- utter_personas
