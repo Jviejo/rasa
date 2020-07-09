@@ -11,7 +11,10 @@ class ProcesoChat(CreateView):
     fields = ["texto"]
 
     def entidades(self, texto):
-        j = json.loads(texto).entities
+        try:
+            j = json.loads(texto).entities
+        except:
+            return []
         return j
 
     def conversacion(self):
@@ -29,7 +32,7 @@ class ProcesoChat(CreateView):
 
 
         datos = requests.post('http://localhost:5005/model/parse/', json=json)
-
+        print(datos.text)
         #
         #
         #
