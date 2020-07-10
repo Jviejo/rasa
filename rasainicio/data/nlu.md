@@ -113,6 +113,7 @@
 - [semana pasada](fecharelativa)
 - [primera semana del mes](fecharelativa)
 - [primer dia del mes](fecharelativa)
+- [ultima dia del mes](fecharelativa)
 
 ## regex:siglas
 - [A-Z]{2}

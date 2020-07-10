@@ -10,13 +10,6 @@ class ProcesoChat(CreateView):
     model = ChatModel
     fields = ["texto"]
 
-    def entidades(self, texto):
-        try:
-            j = json.loads(texto).entities
-        except:
-            return []
-        return j
-
     def conversacion(self):
         return ChatModel.objects.all()
 
@@ -25,13 +18,13 @@ class ProcesoChat(CreateView):
 
     def form_valid(self, form):
         data = form.cleaned_data
-        json = {
+        json_data = {
             "text": data['texto'],
             "message_id": "12",
         }
 
 
-        datos = requests.post('http://localhost:5005/model/parse/', json=json)
+        datos = requests.post('http://localhost:5005/model/parse/', json=json_data)
         print(datos.text)
         #
         #
@@ -47,9 +40,9 @@ class ProcesoChat(CreateView):
         if data['texto'] == 'limpiar':
             ChatModel.objects.all().delete()
         self.object = form.save(commit=False)
-        self.object.usuario = 'user'
+        self.object.usuario = 'bot'
+        self.object.texto = datos.text
         self.object.save()
-        ChatModel.objects.create(usuario='bot', texto=datos.text)
 
         if data['texto'] == 'domain':
             s = requests.Session()
