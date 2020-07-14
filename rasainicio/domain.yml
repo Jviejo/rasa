@@ -1,3 +1,6 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 intents:
 - hola
 - adios
@@ -32,7 +35,6 @@ intents:
 - concursales
 - levantamiento_embargos
 - prescripcion
-
 entities:
 - elemento
 - organismo
@@ -82,7 +84,6 @@ entities:
 - forma_entrada
 - tipo_valor
 slots:
-
   apellido:
     type: text
   calle:
@@ -141,7 +142,6 @@ slots:
     type: text
   siglas:
     type: text
-
 responses:
   utter_intentdir:
   - text: siglas = {siglas} calle={calle} numero {num1} numero {num2} escalera {escalera}
@@ -198,7 +198,6 @@ responses:
   - text: asistencia
   utter_personas:
   - text: personas
-
 actions:
 - utter_liquidar
 - utter_hola
@@ -225,7 +224,3 @@ actions:
 - utter_fraccionamientos
 - utter_asistencia
 - utter_personas
-
-session_config:
-  session_expiration_time: 60  # value in minutes
-  carry_over_slots_to_new_session: true

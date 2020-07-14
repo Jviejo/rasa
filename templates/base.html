@@ -8,6 +8,26 @@
   </head>
   <body>
     <div class="container">
+      <div class="mt-5 relative">
+        <div id="webchat" class="top-0 right-0 w-1/2 h-screen absolute">
+
+        </div>
+      </div>
+  
+  
+    <script src="https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.min.js"></script>
+     <script>
+          WebChat.default.init({
+            selector: "#webchat",
+            initPayload: "/pagar",
+            customData: {"language": "es"}, // arbitrary custom data. Stay minimal as this will be added to the socket
+            socketUrl: "http://localhost:5500",
+            socketPath: "/socket.io/",
+            title: "Oficina Tributaria",
+            subtitle: "Cobro de recibos",
+            params: {"storage": "session"} // can be set to "local"  or "session". details in storage section.
+          })
+        </script>
       <div class="row justify-content-center">
         <div class="col-12">
           <h1 class="mt-2">Prueba de concepto del chatbot</h1>
